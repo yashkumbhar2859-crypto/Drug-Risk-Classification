@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Farma Prediction</title>
+</head>
+<body>
+
+<h2>Drug Regulatory Prediction</h2>
+
+<form action="/predict" method="post">
+
+<h3>Numeric Features</h3>
+
+<!-- 23 Numeric Inputs -->
+<input type="text" name="n1" placeholder="Numeric Feature 1" required><br><br>
+<input type="text" name="n2" placeholder="Numeric Feature 2" required><br><br>
+<input type="text" name="n3" placeholder="Numeric Feature 3" required><br><br>
+<input type="text" name="n4" placeholder="Numeric Feature 4" required><br><br>
+<input type="text" name="n5" placeholder="Numeric Feature 5" required><br><br>
+<input type="text" name="n6" placeholder="Numeric Feature 6" required><br><br>
+<input type="text" name="n7" placeholder="Numeric Feature 7" required><br><br>
+<input type="text" name="n8" placeholder="Numeric Feature 8" required><br><br>
+<input type="text" name="n9" placeholder="Numeric Feature 9" required><br><br>
+<input type="text" name="n10" placeholder="Numeric Feature 10" required><br><br>
+<input type="text" name="n11" placeholder="Numeric Feature 11" required><br><br>
+<input type="text" name="n12" placeholder="Numeric Feature 12" required><br><br>
+<input type="text" name="n13" placeholder="Numeric Feature 13" required><br><br>
+<input type="text" name="n14" placeholder="Numeric Feature 14" required><br><br>
+<input type="text" name="n15" placeholder="Numeric Feature 15" required><br><br>
+<input type="text" name="n16" placeholder="Numeric Feature 16" required><br><br>
+<input type="text" name="n17" placeholder="Numeric Feature 17" required><br><br>
+<input type="text" name="n18" placeholder="Numeric Feature 18" required><br><br>
+<input type="text" name="n19" placeholder="Numeric Feature 19" required><br><br>
+<input type="text" name="n20" placeholder="Numeric Feature 20" required><br><br>
+<input type="text" name="n21" placeholder="Numeric Feature 21" required><br><br>
+<input type="text" name="n22" placeholder="Numeric Feature 22" required><br><br>
+<input type="text" name="n23" placeholder="Numeric Feature 23" required><br><br>
+
+<h3>Categorical Features</h3>
+
+Drug Form:
+<select name="Drug_Form" required>
+<option value="Injection">Injection</option>
+<option value="Capsule">Capsule</option>
+<option value="Tablet">Tablet</option>
+<option value="Syrup">Syrup</option>
+</select><br><br>
+
+Therapeutic Class:
+<select name="Therapeutic_Class" required>
+<option value="Antibiotic">Antibiotic</option>
+<option value="Antidepressant">Antidepressant</option>
+<option value="Antiviral">Antiviral</option>
+<option value="Cardiovascular">Cardiovascular</option>
+<option value="Analgesic">Analgesic</option>
+</select><br><br>
+
+Manufacturing Region:
+<select name="Manufacturing_Region" required>
+<option value="South">South</option>
+<option value="East">East</option>
+<option value="North">North</option>
+<option value="West">West</option>
+</select><br><br>
+
+Requires Cold Storage:
+<select name="Requires_Cold_Storage" required>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select><br><br>
+
+OTC Flag:
+<select name="OTC_Flag" required>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select><br><br>
+
+High Risk Substance:
+<select name="High_Risk_Substance" required>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select><br><br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
